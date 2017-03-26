@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp -->
+<html dir="ltr" lang="en" class="wf-opensans-i3-active wf-opensans-i4-active wf-opensans-i6-active wf-opensans-i7-active wf-opensans-i8-active wf-opensans-n4-active wf-opensans-n6-active wf-opensans-n7-active wf-opensans-n3-active wf-opensans-n8-active wf-montserrat-n4-active wf-montserrat-n7-active wf-active"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Account Login / New Account Creation</title>
+<meta name="description" content="Sri Lanka&#39;s Largest Online Shop showcasing over 15000 products">
+<meta name="keywords" content="Kapruka,Account,Login">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="copyright" content="Copyright 2000-2017 Kapruka.com pvt ltd, Sri Lanka. All Rights Reserved.">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="author" content="Kapruka Sri Lanka">
+<!-- Kapruka Theme Css -->
+<link rel="stylesheet" href="./kapruka1_files/bootstrap.min.css">
+<link rel="stylesheet" href="./kapruka1_files/style1_4.css">
+<link href="./kapruka1_files/font-awesome.min.css" rel="stylesheet">
+<link href="./kapruka1_files/animate.min.css" rel="stylesheet">
+
+
+
+<script async="" src="./kapruka1_files/analytics.js.download"></script><script src="./kapruka1_files/jquery-1.10.2.min.js.download"></script>
+
+<script>
+$( document ).ready(function() 
+{
+	$(function () { $("[data-toggle='popover']").popover( {trigger: "hover focus"}  ); });	
+});
+</script>
+<style>
+.navbar-nav > li > .dropdown-menu {
+    display:none;
+}
+.open > .dropdown-menu {
+    display: block;
+}
+.main-content {
+    float:none;
+    width:100%;
+}
+</style>
+<link rel="stylesheet" href="./kapruka1_files/css" media="all"><script language="javascript">
+function NoAccountSubmit() 
+{ 
+	location.href="accountNew.jsp?origination=regular"
+}
+
+function enterKey(evt) 
+{ 
+  var evt = (evt) ? evt : event 
+  var charCode = (evt.which) ? evt.which : evt.keyCode 
+  if (charCode == 13) document.form1.submit();
+}
+
+function initPage()
+{        
+document.body.onkeypress = enterKey;
+  
+  document.form1.email.focus();  
+  
+}
+</script></head>
+
+<body>
+
+
+<!-- ========== Header Start ========== -->
+<div id="topWrapper">
+  <div id="topContent" class="container">
+    <div class="row">
+      <div class="col-md-3 welcome sep">
+        <p>Bringing Sri Lanka one step closer to you</p>
+      </div>
+      <div class="col-sm-8 col-md-6 topMenu sep">
+        <ul>
+          <li><a href="http://www.kapruka.com/contactUs/officeLocations.jsp">Contact Us</a></li>
+          <li><a href="http://www.kapruka.com/contactUs/about_us.jsp">About Kapruka</a></li>          
+
+          
+          <li><a href="http://www.kapruka.com/contactUs/shippingPolicyDelivery.jsp">About Delivery</a></li>
+        
+  		  <li><a href="http://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp">Site Map</a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-5 col-md-3 myaccount">
+        <ul>
+          <li class="sep">
+          <a href="https://www.kapruka.com/shops/customerAccounts/accountLogin.jsp">
+          <i class="fa fa-user"></i> 
+          
+          Your Account
+
+          </a>
+          </li>
+          <li><a href="http://www.kapruka.com/contactUs/orderStatus.jsp"><i class="fa fa-calendar"></i> Order Status</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <header>
+      <div class="headerContainer">
+        <div id="logo" class="col-xs-12 col-sm-4 col-md-4"> <a href="http://www.kapruka.com/"><img src="./kapruka1_files/logo.jpg" title="Kapruka, Online Shopping in Sri Lanka" alt="Kapruka in E-Commerce Sri Lanka" class="img-responsive"></a> </div>
+        <div id="search" class="col-xs-12 col-sm-4 col-md-5">
+          <form name="sform" method="get" action="https://www.kapruka.com/searchLocal/searchEngine.jsp">
+           <input type="text" onkeyup="document.getElementById(&#39;cartlinkId&#39;).removeAttribute(&#39;href&#39;);" name="searchQuery" value="" placeholder="Search the entire store..." class="form-control input-lg">                    
+           <button onclick="document.sform.submit();" type="button" class="btn-search"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <a id="cartlinkId" href="https://www.kapruka.com/shops/checkout/deliveryCartViewPage.jsp">
+        <div id="cart" class="col-xs-12 col-sm-4 col-md-3 no-float"><span class="icon pull-left septr"><i class="fa fa-shopping-cart"></i></span><span id="cart-total">0</span> Item(s): 
+        
+        <strong>Rs.0</strong>
+        
+        </div>
+        </a>
+      </div>
+      <div class="clear"></div>
+    </header>
+  </div>
+</div>
+
+<div class="nav-wrap">
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+    	<div class="row">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle bg-green" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <h3 class="menu-toggle">All Categories</h3>
+              <div class="icon-bars"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </div>
+              </button>
+              
+              <button type="button" class="navbar-toggle bg-blue" data-toggle="collapse" data-target=".nav-search">
+              <h3 class="menu-toggle">Menus</h3>
+              <div class="icon-bars"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </div>
+              </button>
+            </div>
+            
+            <!-- /.navbar-collapse -->
+            <div id="test2" class="nav-search collapse">
+              <div class="search_box">
+                <ul class="nav navbar-nav">                  
+                   
+                  <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Best%20Seller">Best Sellers</a></li>                  
+ <!-- 
+                  <li><a href="http://www.kapruka.com/shops/specialGifts/newyearGiftsSelectPage.jsp">Newyear Gifts</a></li>
+  -->      
+                
+                  <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=New%20Additions">New Additions</a></li>
+                  
+                  <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=For%20Sale">On Sale</a></li>
+                  <li><a href="http://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp">Popular Categories</a></li>
+                  <li><a href="http://www.kapruka.com/shops/events_home.jsp">For Events</a></li>
+                  <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Unique%20Gifts">Unique Selections</a></li>
+                  <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=customized">Customized</a></li>
+                </ul>
+              </div>
+              <!-- end search_box -->
+            </div>
+            <!--/.nav-search -->
+        </div>
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+</div>
+
+<!-- ========== Header Start ========== -->
+
+
+<div class="container">
+<div class="row">
+
+
+
+<!-- ********** Sidebar Start **********  -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav cat">
+		<li>
+			<div class="dropdown-toggle allCat" data-toggle="dropdown">All
+				Categories</div>
+			<ul class="dropdown-menu dropdown-menu-1">
+				<!-- Sidebar -->
+				<div id="sidebar-wrapper">
+
+					
+					<div class="box">
+
+						
+						<h3>Our Top Departments</h3>
+						<ul class="sidebar-na">
+
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=foodcity">Cargills Foodcity</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=cakes">Cake Shop</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=chocolates">Chocolates</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=electronics">Electronics</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=flowers">Flower Shop</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/food_home_page.jsp">Food / Restaurants</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/fruitBaskets/fruitBasketSelectPage.jsp">Fruit / Veg Baskets</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/giftVouchersSelectPage.jsp">Gift Vouchers</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/grocerySelectPage.jsp">Grocery Items</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=greetings">Greeting Cards</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/hampers/hampersSelectPage.jsp">Hampers</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=jewellery">Jewelry</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/pizza_home.jsp">Pizza</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=customized">Personalized Gifts</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/perfumes_to_lanka.jsp">Perfumes / Fragrances</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=fashion">Clothing / Fashion</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/cosmetics.jsp">Cosmetics</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/schoolSupplies.jsp">School Supplies</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/vitaminsSelectPage.jsp">Supplements / Health</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/softToysSelectPage.jsp">Soft Toys / Kids Toys</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/ornamentsSelectPage.jsp">Ornaments</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=You%20and%20Me">You &amp; Me Collection</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/specialGifts/household_gifts.jsp">Homeware Gifts</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp">See More Gifts »»</a>
+								</li>
+							
+						</ul>
+						
+						<h3>Kapruka Services</h3>
+						<ul class="sidebar-na">
+
+							
+							<li><a href="http://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp">Gift Delivery in SL</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/merchandise_srilankan/index.jsp">Get SL Books/DVDs</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/shops/merchandise_srilankan/index.jsp">Get SL Merchandise</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/Sri_Lanka/landing_srilankan_grocery.jsp">Get SL Grocery</a>
+								</li>
+							
+							<li><a href="https://www.kapruka.com/Sri_Lanka/picturePost/login.jsp">Photo Print &amp; Delivery</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/horescope/horoscopeMainForm.jsp">Astrology Services</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/Sri_Lanka/mobile_reloads/index.jsp">Reload Mobile Phones</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/carRentals/rental_cars_sri_lanka.jsp">Rent a Car in SL</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/Sri_Lanka/realestate/index.jsp">Realestate Services</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/international_gifts/index.jsp">Gifts » Other Countries</a>
+								</li>
+							
+						</ul>
+						
+						<h3>About Kapruka</h3>
+						<ul class="sidebar-na">
+
+							
+							<li><a href="http://www.kapruka.com/contactUs/officeLocations.jsp">Office Locations</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/contactUs/b2bcard.jsp">Get a Corporate Card</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_t1.jsp?docid=1240182218937">Kapruka Careers</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/contactUs/about_us.jsp">Awards</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/contactUs/onlineHelpForm.jsp">Contact Us</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/contactUs/orderStatus.jsp">Order Tracking</a>
+								</li>
+							
+							<li><a href="http://www.kapruka.com/contactUs/shippingPolicyDelivery.jsp">Delivery Areas</a>
+								</li>
+							
+						</ul>
+						
+
+					</div>
+
+					
+				</div>
+			</ul>
+		</li>
+	</ul>
+	<ul class="nav navbar-nav dropdown-menu-2">
+
+
+ 
+		<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Best%20Seller">Best
+				Sellers</a></li>
+				
+				
+ 
+  
+		<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=New%20Additions">New Additions</a></li>
+
+<!--
+		<li
+			>
+			<a href="http://www.kapruka.com/shops/specialGifts/newyearGiftsSelectPage.jsp"><font color=a5f0bf>&#127873;</font> New Year Gifts</a></li>
+ --> 			
+		<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=For%20Sale">On Sale</a></li>
+		<li><a href="http://www.kapruka.com/shops/deliveryCatalogCompact_wide.jsp">Popular Categories</a></li>
+		<li><a href="http://www.kapruka.com/shops/events_home.jsp">For Events</a></li>
+		<li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Unique%20Gifts">Unique
+				Selections</a></li>
+		<li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=customized">Customized</a></li>
+	</ul>
+</div>
+<!-- ********** Sidebar End **********  -->
+
+   
+<!-- ********** Main Content Start **********  -->
+<div class="col-md-9 main-content space-top">
+<div class="row">
+
+        <div class="col-md-12 mid space-bot wow fadeInDown animated">
+          <div class="box">
+          	<ol class="breadcrumb">
+              <li><a href="http://www.kapruka.com/"><i class="fa fa-home"></i></a></li>
+              <li class="active">Customer Account Login</li>
+            </ol>
+            
+            <h1>Your Shopping Account</h1>
+            <div class="clear"></div>
+            <div class="contact space-top">
+              <div class="col-md-12 space-bot">
+                      		
+<!--  Main Content START -->
+             
+              <div class="row space-bot">
+              
+              <div class="col-md-6" style="border-right:1px solid #ddd;">
+              	<div class="space-bot">
+                	<h3 style="padding:0 0 15px;">New Customers</h3>
+                	<p> If you create an account with us, you will get additional benefits 
+                  such as order history, bonus cash and more.
+                    </p>
+                     <button onclick="NoAccountSubmit();" type="button" class="btn btn-primary" style="padding:5px 20px; font-weight:700;">Create Account</button>
+                </div>
+              </div>
+              <div class="col-md-6">
+             	 <h3 style="padding:0 0 15px;">Kapruka Members</h3>
+                 <p>If you have a Kapruka account, then enter your e-mail and password here.</p>
+                 <form name="form1" method="post" action="Details.php">
+                 <input type="hidden" name="origin" value="regular">
+    
+                 <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" name="email" class="form-control col-md-6" id="exampleInputEmail1" placeholder="Enter email" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" name="password" class="form-control col-md-6" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                   <input type="submit" value="Login" name="Login" class="btn btn-lg btn-primary space-bot" style="padding:5px 20px; font-weight:700;">
+                   <p> 
+				</p></form>
+<a href="javascript:void(0);" data-toggle="popover" title="" data-container="body" data-placement="right" data-content="Please enter your email address on the password recovery page and we&#39;ll email your password to you shortly." data-original-title="How to recover the password">
+Forgot your password   
+</a>
+
+  |  
+
+<a href="javascript:void(0);" data-toggle="popover" title="" data-container="body" data-placement="right" data-content="Save time, place quick orders • Special Discounts • Your Order History • Address Book • Repeat previous orders" data-original-title="Account benefits">
+Account benefits   
+  | 
+  
+</a><a href="https://www.kapruka.com/shops/customerAccounts/accountPasswordrecovery.jsp">Recover Password</a>
+
+
+  
+
+                   
+			    </div>
+              </div>  
+
+
+              		
+<!--  Main Content END -->
+              		
+              </div>
+            </div>
+           </div>
+         </div>
+            
+<div class="col-md-12 space-bot wow fadeInDown animated ">
+<div class="freeship">
+
+	
+<strong>Delivery is free</strong> in Colombo and it's suburbs. Outstation delivery charges start from Rs 100</div>
+
+</div>
+        <!-- Browse More Gifts Start -->
+        <div class="col-md-8 mid space-bot wow fadeInDown animated addtion">
+          <div class="box spaceIn">
+            <h4>Browse <span class="text-blue">More Gifts</span></h4>
+            <div class="clear"></div>
+              <div class="row gifts">
+                  <div class="col-sm-4">
+                    <ul class="list-group">
+                      <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Birthday">For Birthdays</a></li>
+                      <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Anniversary">For Anniversaries</a></li>
+                      <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=I%20Love%20You">For Love</a></li>
+                      <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=Sympathy">For Sympathy</a></li>
+                      <li><a href="http://www.kapruka.com/Sri_Lanka/cms/kapruka_gift_category_t1.jsp?type=You%20and%20Me">You and Me Collection</a></li>
+                      <li><a href="http://www.kapruka.com/shops/events_home.jsp">See More Events &gt;&gt;</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="list-group">
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=cakes">Cakes</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=flowers">Flowers</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/chocolatesSelectPage.jsp?subcat=All%20Items">Chocolates</a></li>
+                      <li><a href="http://www.kapruka.com/shops/fruitBaskets/fruitBasketSelectPage.jsp">Fruit Baskets</a></li>
+                      <li><a href="http://www.kapruka.com/shops/hampers/hampersSelectPage.jsp">Hampers</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/softToysSelectPage.jsp">Toys / Kids</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="list-group">
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=greetings">Greeting Cards</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/giftVouchersMain.jsp">Gift Vouchers</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/grocerySelectPage.jsp">Grocery</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=electronics">Home Appliances</a></li>
+                      <li><a href="http://www.kapruka.com/shops/specialGifts/spotlights.jsp?t=jewellery">Jewellery</a></li>
+ 					  <li><a href="http://www.kapruka.com/shops/specialGifts/food_home_page.jsp">Restaurant Food</a></li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+        </div>
+         <!-- Browse More Gifts End -->
+         
+         
+         
+        <!-- Today's Featured Gift Start -->
+        <div class="col-md-4 mid space-bot wow fadeInDown animated">
+          <div class="box spaceIn">
+            <h4>Today's <span class="text-blue"> Featured Gift</span></h4>
+            <div class="clear"></div>
+              <div class="prod-list">
+              	<div class="media-left"> 
+                <a class="" href="https://www.kapruka.com/shops/deliveryProductPreview.jsp?id=flowers00T742&amp;type=flowers">
+                <img alt="Kapruka flowers" src="./kapruka1_files/1489128859363__DSC1917.jpg">
+                </a>
+                </div> 
+                <div class="media-body">
+                <a class="catUrl" href="https://www.kapruka.com/shops/deliveryProductPreview.jsp?id=flowers00T742&amp;type=flowers">
+                <p><span class="text-gray">Garden Of Wishe..</span><br>
+                  <span class="text-blue">More Details</span><br>
+                  <strong><span class="text-black">US$ 24</span><br>
+                  <span class="text-green">RS. 3,360</span></strong>
+                </p>
+                </a> </div>
+              </div>
+          </div>
+        </div>
+         <!-- Today's Featured Gift End -->
+                 
+<div class="col-md-12 space-bot wow fadeInDown animated ">
+
+	
+<div class="toll-free">We accept all payment options. Call 071-555-1111 for assistance</div>
+<img src="./kapruka1_files/payment-options.png" with="1000px" height="102px">
+
+
+</div>
+
+            
+</div>
+<!-- ********** Main Content End **********  -->
+          
+</div>
+</div>      
+</div>
+
+
+<div class="footer wow fadeInDown animation">
+  <div class="container">
+    <div class="row top">
+      <div id="logo" class="col-xs-12 col-sm-4 col-md-4"> <a href="http://www.kapruka.com/"><img src="./kapruka1_files/logo.jpg" title="Kapruka, Sri Lanka&#39;s largest online shop" alt="Kapruka, Sri Lanka&#39;s largest online shop" class="img-responsive"></a> </div>
+      <div class="col-xs-12 col-sm-8 col-md-8 text top-space">
+        <p>Over <span class="text-blue">
+          582,000+</span> Sri Lankan Fans. USA/Canada: <span class="text-black">1-800-651-5099</span> (Customer Feedback) | <a href="http://www.kapruka.com/contactUs/about_us.jsp">Read About Kapruka</a> | <a href="http://www.kapruka.com/contactUs/kapruka_reviews.jsp">Reviews</a></p>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-3">
+        <h4>Follow us</h4>
+        <ul class="social-share">
+          <li><a href="http://www.facebook.com/kaprukafans" class="fb"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://twitter.com/kapruka" class="twit"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://www.google.com/+kapruka" class="gplus"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="http://www.linkedin.com/company/kapruka-com" class="Likn"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+        <div class="clear"></div>
+        <h4>Central Office - <span class="text-blue-dark">Sri Lanka</span>:</h4>
+        <p> 237/22 Vijayakumaratunga Mawatha,<br>
+          Colombo 5<br>
+          (Hotline: <span class="text-black">+94-71-5551111 )</span> <br>
+          email: <a href="http://www.kapruka.com/contactUs/onlineHelpForm.jsp">colombo.office@kapruka.com</a><br> 
+          <i class="fa fa-whatsapp" style="color:green" aria-hidden="true"></i> Support via Whatsapp: +94702855000 
+          </p>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-9">
+        <div class="office-add">Kapruka - Sri Lanka's Largest Online Shopping Destination  |  Office Locations:</div>
+        <div class="row">
+          <div class="col-sm-4">
+            <h4>USA:</h4>
+            <p> 4461 Wellington Gardens Drive,<br>
+              Lexington, KY40513,<br>
+              USA<br>(Phone/Fax: <span class="text-black">+1-859-215-0159</span>) <br>
+              email: <a href="http://www.kapruka.com/contactUs/onlineHelpForm.jsp">lexingtonky.office@kapruka.com</a> </p>
+          </div>
+          <div class="col-sm-4">
+            <h4>United Kingdom:</h4>
+            <p> 145-157 St John Street, London<br>
+              EC1V 4PY, <br>
+              United Kingdom<br>(Phone/Fax: <span class="text-black">+44-207-078-4149</span>) <br>
+              email: <a href="http://www.kapruka.com/contactUs/onlineHelpForm.jsp">london.office@kapruka.com</a> </p>
+          </div>
+          <div class="col-sm-4">
+            <h4>Australia:</h4>
+            <p> 1362 Ports Hill Road,<br>
+              Blackwood SA 5051, <br>
+              Australia <br>(Phone/Fax: <span class="text-black">+61-870-708-164</span>) <br>
+              email: <a href="http://www.kapruka.com/contactUs/onlineHelpForm.jsp">adelaide.office@kapruka.com</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container copy-right">
+  <div class="row">
+    <div class="col-sm-8">
+      <p><i class="fa fa-copyright"></i> Copyright 2000-2017 <span class="text-blue-dark">Kapruka.com® </span> Online Shopping for <a href="http://en.wikipedia.org/wiki/Sri_Lanka">Sri Lankans</a> around the world.</p>
+    </div>
+    <div class="col-sm-4"> <img src="./kapruka1_files/pay-cards.jpg"> </div>
+  </div>
+</div>
+
+
+
+
+<!-- =============== Bootstrap core JavaScript By Kapruka ====================== -->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<script src="./kapruka1_files/jquery-1.11.1.min.js.download"></script>
+<script src="./kapruka1_files/bootstrap.min.js.download"></script>
+
+<script async="" src="./kapruka1_files/main.js.download"></script>
+<script async="" src="./kapruka1_files/kaprukaJS.js.download"></script>
+<script src="./kapruka1_files/wow.min.js.download"></script>
+
+<!-- Fonts Aysync Load -->
+<script src="./kapruka1_files/webfont.js.download"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800', 'Montserrat:400,700']
+    }
+  });
+</script>
+
+<!--  Kapruka Google Analytics Code Start -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-171457-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!--  Kapruka Google Analytics Code End -->
+
+
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+
+
+
+
+});
+
+</script>
+
+
+</body></html>
