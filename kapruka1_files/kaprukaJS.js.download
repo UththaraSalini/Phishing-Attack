@@ -1,0 +1,36 @@
+//window.onerror = handleJavascriptErrors;
+
+// Disable image right clicks
+$(document).ready(function() {
+    $("img").on("contextmenu",function(){
+        alert("Graphics and media on this page are copyrighted and not available for download or use. All product images in Kapruka contains copyright watermarks. Attempt logged.");
+    	return false;
+    }); 
+});
+
+
+function handleJavascriptErrors(msg, url, lno) {
+	window.status = 'Kapruka Service Message';
+	locationStr = "NA";
+	if (window.document.location != null)
+		locationStr = window.document.location.toString();
+	locationStr = escape(locationStr);
+	browserString = navigator.userAgent;
+	if ((browserString != null) && (browserString.indexOf("MSIE") != -1)) {
+		errString = "";
+		msgArray = new Array();
+		urlArray = new Array();
+		lnoArray = new Array();
+		msgArray[msgArray.length] = msg;
+		urlArray[urlArray.length] = url;
+		lnoArray[lnoArray.length] = lno;
+		for ( var i = 0; i < msgArray.length; i++) {
+			errString = errString + urlArray[i] + ":" + lnoArray[i] + ":"
+					+ msgArray[i];
+		}
+		pic1 = new Image(1, 1);
+		pic1.src = "/tools/javascriptErrorLoger.jsp?locationStr=" + locationStr
+				+ "&ErrorStr=" + errString;
+	}
+	return true
+}
